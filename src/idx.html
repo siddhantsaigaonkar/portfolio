@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur
+            after:content-[''] 
+            after:pointer-events-none 
+            after:absolute 
+            after:inset-x-0 
+            after:bottom-0 
+            after:h-px 
+
+            main-header">
+  <div class="mx-auto max-w-7xl px-4">
+
+    <!-- Checkbox Toggle -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+    <div class="flex h-16 items-center justify-between">
+
+      <!-- Left: Logo + Desktop Nav -->
+      <div class="flex items-center gap-6">
+
+ <!-- <img src="./img/logo.png" alt="Logo" class="h-16 w-auto" /> -->
+
+ <div class="flex items-center gap-1">
+
+           <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center 
+            text-slate-950 hover:rotate-12 transition-transform duration-300 cursor-pointer">
+  <span class="font-bold text-2xl">S</span>
+</div>
+<span className="text-xl font-bold tracking-tighter dark:text-white text-slate-900 font-sans">
+  iddhant.Dev
+</span>
+
+ </div>
+
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="nav-link">ABOUT</a>
+          <a href="#" class="nav-link">SKILLS</a>
+          <a href="#" class="nav-link">SERVICES</a>
+          <a href="#" class="nav-link">CONTACT</a>
+        </div>
+      </div>
+
+      <!-- Right: Theme + Burger -->
+      <div class="flex items-center gap-3">
+
+        <button class="theme-btn" id="themeToggle">🌙</button>
+
+        <!-- Burger -->
+        <label for="menu-toggle" class="md:hidden cursor-pointer p-2 rounded-md hover:bg-slate-100">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-96">
+      <div class="flex flex-col gap-4 py-4 ">
+
+        <a href="#" class="nav-link">HOME</a>
+        <a href="#" class="nav-link">ABOUT</a>
+        <a href="#" class="nav-link">SKILLS</a>
+        <a href="#" class="nav-link">SERVICES</a>
+        <a href="#" class="nav-link">CONTACT</a>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>

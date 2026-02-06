@@ -1,0 +1,789 @@
+<!doctype html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white dark:bg-slate-950 transition-colors duration-300">
+
+
+  <!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-slate-950 shadow-md transition-all duration-300">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between py-5">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2 group">
+        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+          <span class="text-white font-bold text-xl">D</span>
+        </div>
+        <span class="text-slate-900 dark:text-white font-bold text-2xl tracking-tight">DevFlow</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500">Home</a>
+        <a href="#about" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500">About</a>
+        <a href="#skills" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500">Skills</a>
+        <a href="#projects" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500">Projects</a>
+        <a href="#contact" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500">Contact</a>
+        <button id="darkModeBtn" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 transition">🌙</button>
+      </div>
+
+      <!-- Mobile Menu & Burger -->
+      <div class="flex md:hidden items-center space-x-4">
+        <button id="darkModeBtnMobile" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 transition">🌙</button>
+        <button id="mobileMenuBtn" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none">
+
+          <!-- Hamburger icon -->
+          <svg class="h-12 w-12 text-white " fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-950  backdrop-blur-md">
+    <div class="space-y-1 px-2 pt-2 pb-3 text-2xl">
+      <a href="#home" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 block p-2">Home</a>
+      <a href="#about" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 block p-2">About</a>
+      <a href="#skills" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 block p-2">Skills</a p-2>
+      <a href="#projects" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 block p-2">Projects</a>
+      <a href="#contact" class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 block p-2">Contact</a>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden ">
+  
+  <!-- Background blobs -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/20 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 dark:bg-purple-500/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+    
+    <!-- Badge -->
+    <span class="inline-block py-1 px-4 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 text-sm font-semibold tracking-wider mb-6 uppercase">
+      Available for New Projects
+    </span>
+
+    <!-- Heading -->
+    <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter text-slate-900 dark:text-white">
+      Crafting 
+      <span class="text-transparent bg-clip-text bg-linear-to-r from-cyan-500 to-purple-600">Digital</span><br>
+      Experiences.
+    </h1>
+
+    <!-- Paragraph -->
+    <p class="text-xl md:text-2xl dark:text-slate-400 text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+      Hi, I'm <span class="dark:text-white text-slate-900 font-medium underline decoration-cyan-500 underline-offset-4">Siddhant</span>. A full-stack engineer specializing in building exceptional digital products that combine performance with cutting-edge design.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+      <a href="#projects" class="group px-8 py-4 dark:bg-white bg-slate-900 dark:text-slate-950 text-white rounded-full font-bold text-lg hover:bg-cyan-500 transition-all flex items-center gap-2">
+        View My Work
+        <!-- Use a right arrow emoji instead of React icon -->
+        <span class="group-hover:translate-x-1 transition-transform">➡️</span>
+      </a>
+
+      <a href="#contact" class="px-8 py-4 glass border dark:border-white/10 border-slate-200 dark:text-white text-slate-900 rounded-full font-bold text-lg hover:bg-slate-200 dark:hover:bg-white/10 transition-all">
+        Let's Talk
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-400 dark:text-slate-500 animate-bounce">
+    <div class="w-6 h-10 border-2 border-slate-400 dark:border-slate-500 rounded-full flex justify-center p-1">
+      <div class="w-1 h-2 bg-slate-400 dark:bg-slate-500 rounded-full"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- section -->
+
+
+<!-- About Section -->
+<section id="about" class="px-6 py-18 ">
+  <div class="max-w-7xl mx-auto px-4">
+    
+    <!-- Section Header -->
+  
+
+    <!-- Content Grid -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Image Column -->
+      <div class="relative group">
+        <div class="aspect-square rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 shadow-xl border border-slate-200 dark:border-slate-800 ">
+          <img 
+            src="./img/myimg.jpg" 
+            alt="Alex" 
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+
+        <!-- Experience Card -->
+        <div class="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl p-6 hidden md:block border border-slate-200 dark:border-white/10 shadow-lg bg-white/70 dark:bg-slate-900/70 backdrop-blur">
+          <div class="text-cyan-600 dark:text-cyan-400 text-4xl font-bold mb-2">
+            2+
+          </div>
+          <div class="text-slate-700 dark:text-slate-300 text-sm font-medium">
+            Years of experience building scalable applications.
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="space-y-6">
+<p class="text-3xl font-bold text-slate-900 dark:text-white font-sans leading-snug">
+  Hi, I'm Siddhant
+</p>
+
+
+
+
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+I am a results-driven Full Stack Developer with a passion for creating impactful digital solutions. My journey in the tech world began nearly two years ago, and since then, I’ve had the privilege of working on everything from small startup MVPs to large-scale enterprise platforms.
+        </p>
+
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+I believe that great software isn’t just about writing code; it’s about solving real-world problems and creating experiences that are intuitive, accessible, and delightful.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex gap-4 pt-4 ">
+
+          <div class="flex-1 p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors">
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">
+              10+
+            </div>
+            <div class="text-slate-500 text-xs uppercase tracking-wider">
+              Projects Completed
+            </div>
+          </div>
+
+          <div class="flex-1 p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors">
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">
+              5
+            </div>
+            <div class="text-slate-500 text-xs uppercase tracking-wider">
+              Tech Awards
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Download Button -->
+ <div class="pt-6 flex flex-wrap gap-4">
+  <a 
+    href="./assets/Siddhant_Saigaonkar_FullStack_Developer_Resume.pdf" 
+    download
+    class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 transition-colors font-bold underline"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+    </svg>
+    <span>Download Resume</span>
+  </a>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--  -->
+
+
+<!-- Skills Section -->
+ <div class="bg-[#0f172a]">
+
+
+<section id="skills" class="relative max-w-7xl mx-auto px-6 py-18  ">
+  <!-- Section Title -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">My Toolkit</h2>
+    <p class="text-lg text-slate-600 dark:text-slate-400">Technologies I use to bring ideas to life.</p>
+  </div>
+
+  <!-- Skills Grid -->
+  <div class="grid md:grid-cols-2 gap-16">
+    
+    <!-- Frontend Development -->
+    <div class="opacity-0 animate-fadeIn">
+      <h3 class="text-2xl font-bold mb-8 capitalize flex items-center gap-3 text-slate-900 dark:text-white">
+        <span class="w-8 h-8 rounded bg-cyan-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
+          <!-- Icon placeholder -->
+          🖥️
+        </span>
+        Frontend Development
+      </h3>
+      
+      <div class="space-y-6">
+        <!-- Skill Example -->
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">HTML</span>
+            <span class="text-slate-400 dark:text-slate-500">90%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">CSS</span>
+            <span class="text-slate-400 dark:text-slate-500">85%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 85%;"></div>
+          </div>
+        </div>
+
+                <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">JS</span>
+            <span class="text-slate-400 dark:text-slate-500">85%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 85%;"></div>
+          </div>
+        </div>
+                <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">React</span>
+            <span class="text-slate-400 dark:text-slate-500">80%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 80%;"></div>
+          </div>
+        </div>
+                <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">Next</span>
+            <span class="text-slate-400 dark:text-slate-500">75%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 75%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Development -->
+    <div class="opacity-0 animate-fadeIn">
+      <h3 class="text-2xl font-bold mb-8 capitalize flex items-center gap-3 text-slate-900 dark:text-white">
+        <span class="w-8 h-8 rounded bg-cyan-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
+          <!-- Icon placeholder -->
+          🗄️
+        </span>
+        Backend Development
+      </h3>
+      
+      <div class="space-y-6">
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">NODE</span>
+            <span class="text-slate-400 dark:text-slate-500">70%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 50%;"></div>
+          </div>
+        </div>
+
+          <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">EXPRESS</span>
+            <span class="text-slate-400 dark:text-slate-500">80%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 80%;"></div>
+          </div>
+        </div>
+
+              <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">SQL</span>
+            <span class="text-slate-400 dark:text-slate-500">50%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 50%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-slate-700 dark:text-slate-300">NOSQL</span>
+            <span class="text-slate-400 dark:text-slate-500">85%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-linear-to-r from-cyan-500 to-purple-500" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ </div>
+
+
+
+<!-- Certifications Section -->
+<section id="certifications" class="relative max-w-7xl mx-auto px-6 py-18">
+  <!-- Section Title -->
+  <div class="text-center mb-10">
+    <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Certifications</h2>
+    <p class="text-lg text-slate-600 dark:text-slate-400">Validated expertise in industry standard technologies.</p>
+  </div>
+
+  <!-- Certifications List -->
+  <div class="max-w-4xl mx-auto space-y-4">
+
+    <!-- Single Certification -->
+    <div class="glass p-6 rounded-xl flex items-center justify-between border dark:border-white/5 border-slate-200 hover:bg-white/50 dark:hover:bg-white/5 transition-all group">
+      <div class="flex items-center gap-6">
+        <div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-600 dark:text-cyan-400 transition-colors">
+          <!-- Award Icon Placeholder -->
+          🏆
+        </div>
+        <div>
+          <h4 class="font-bold dark:text-white text-slate-900">Certified React Developer</h4>
+          <div class="flex items-center gap-4 text-sm dark:text-slate-500 text-slate-500 mt-1">
+            <span class="flex items-center gap-1">🏢 React Academy</span>
+            <span class="flex items-center gap-1">📅 Jan 2025</span>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="opacity-0 group-hover:opacity-100 transition-opacity p-2 dark:text-slate-400 text-slate-400 hover:text-cyan-500">
+        🔗
+      </a>
+    </div>
+
+    <!-- Another Certification -->
+    <div class="glass p-6 rounded-xl flex items-center justify-between border dark:border-white/5 border-slate-200 hover:bg-white/50 dark:hover:bg-white/5 transition-all group">
+      <div class="flex items-center gap-6">
+        <div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-600 dark:text-cyan-400 transition-colors">
+          🏆
+        </div>
+        <div>
+          <h4 class="font-bold dark:text-white text-slate-900">Fullstack Web Developer</h4>
+          <div class="flex items-center gap-4 text-sm dark:text-slate-500 text-slate-500 mt-1">
+            <span class="flex items-center gap-1">🏢 FreeCodeCamp</span>
+            <span class="flex items-center gap-1">📅 Dec 2024</span>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="opacity-0 group-hover:opacity-100 transition-opacity p-2 dark:text-slate-400 text-slate-400 hover:text-cyan-500">
+        🔗
+      </a>
+    </div>
+
+
+
+
+        <div class="glass p-6 rounded-xl flex items-center justify-between border dark:border-white/5 border-slate-200 hover:bg-white/50 dark:hover:bg-white/5 transition-all group">
+      <div class="flex items-center gap-6">
+        <div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-600 dark:text-cyan-400 transition-colors">
+          🏆
+        </div>
+        <div>
+          <h4 class="font-bold dark:text-white text-slate-900">Meta Front-End Developer Specialization</h4>
+          <div class="flex items-center gap-4 text-sm dark:text-slate-500 text-slate-500 mt-1">
+            <span class="flex items-center gap-1">🏢 Meta(via Coursera)</span>
+            <span class="flex items-center gap-1">📅 Dec 2025</span>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="opacity-0 group-hover:opacity-100 transition-opacity p-2 dark:text-slate-400 text-slate-400 hover:text-cyan-500">
+        🔗
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="relative max-w-7xl mx-auto px-6 py-18">
+  <!-- Section Title -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Featured Work</h2>
+    <p class="text-lg text-slate-600 dark:text-slate-400">A selection of my favorite projects from the last few years.</p>
+  </div>
+
+  <!-- Projects Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2">
+
+
+    <!-- Single Project -->
+    <div class="group glass rounded-2xl overflow-hidden border dark:border-white/5 border-slate-200 hover:border-cyan-500 transition-all duration-500 shadow-sm hover:shadow-xl bg-white dark:bg-transparent">
+      
+      <!-- Project Image -->
+      <div class="aspect-video relative overflow-hidden">
+        <img src="https://picsum.photos/seed/dash/800/500" alt="Project 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          <a href="#" class="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-500 transition-colors">🔗</a>
+          <a href="#" class="p-3 glass text-white rounded-full hover:bg-white/20 transition-colors">🐙</a>
+        </div>
+      </div>
+
+      <!-- Project Details -->
+      <div class="p-6">
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mb-1">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">React</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">Tailwind</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 dark:text-white text-slate-900 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Project One</h3>
+        <p class="dark:text-slate-400 text-slate-600 text-sm line-clamp-2">A web application that demonstrates interactive UI components and responsive design using modern web technologies.</p>
+      </div>
+    </div>
+
+    <!-- Another Project -->
+    <div class="group glass rounded-2xl overflow-hidden border dark:border-white/5 border-slate-200 hover:border-cyan-500 transition-all duration-500 shadow-sm hover:shadow-xl bg-white dark:bg-transparent">
+      <div class="aspect-video relative overflow-hidden">
+        <img src="https://picsum.photos/seed/eco/800/500" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          <a href="#" class="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-500 transition-colors">🔗</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">Node.js</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">API</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 dark:text-white text-slate-900 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Project Two</h3>
+        <p class="dark:text-slate-400 text-slate-600 text-sm line-clamp-2">Backend service providing secure APIs with authentication and real-time data handling.</p>
+      </div>
+    </div>
+
+       <!-- Another Project -->
+    <div class="group glass rounded-2xl overflow-hidden border dark:border-white/5 border-slate-200 hover:border-cyan-500 transition-all duration-500 shadow-sm hover:shadow-xl bg-white dark:bg-transparent">
+      <div class="aspect-video relative overflow-hidden">
+        <img src="https://picsum.photos/seed/nova/800/500" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          <a href="#" class="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-500 transition-colors">🔗</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">Node.js</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">API</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 dark:text-white text-slate-900 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Project Two</h3>
+        <p class="dark:text-slate-400 text-slate-600 text-sm line-clamp-2">Backend service providing secure APIs with authentication and real-time data handling.</p>
+      </div>
+    </div>
+
+
+          <!-- Another Project -->
+    <div class="group glass rounded-2xl overflow-hidden border dark:border-white/5 border-slate-200 hover:border-cyan-500 transition-all duration-500 shadow-sm hover:shadow-xl bg-white dark:bg-transparent">
+      <div class="aspect-video relative overflow-hidden">
+        <img src="https://media.istockphoto.com/id/2244154355/photo/api-application-programming-interface-concept-person-using-laptop-with-digital-gear-icons.jpg?s=2048x2048&w=is&k=20&c=8LiWBWzTpncKeX9niwdPSMVFIxgjX9WQOSmcKqPsj0M=" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          <a href="#" class="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-500 transition-colors">🔗</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">Node.js</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">API</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 dark:text-white text-slate-900 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Project Two</h3>
+        <p class="dark:text-slate-400 text-slate-600 text-sm line-clamp-2">Backend service providing secure APIs with authentication and real-time data handling.</p>
+      </div>
+    </div>
+
+          <!-- Another Project -->
+    <div class="group glass rounded-2xl overflow-hidden border dark:border-white/5 border-slate-200 hover:border-cyan-500 transition-all duration-500 shadow-sm hover:shadow-xl bg-white dark:bg-transparent">
+      <div class="aspect-video relative overflow-hidden">
+        <img src="https://media.istockphoto.com/id/1411195926/photo/project-manager-working-on-laptop-and-updating-tasks-and-milestones-progress-planning-with.jpg?s=2048x2048&w=is&k=20&c=d--cQ2K441EZ37SZ_w-0h1czZfTGKqcQXdKuvCrpPss=" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          <a href="#" class="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-500 transition-colors">🔗</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">Node.js</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">API</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 dark:text-white text-slate-900 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Project Two</h3>
+        <p class="dark:text-slate-400 text-slate-600 text-sm line-clamp-2">Backend service providing secure APIs with authentication and real-time data handling.</p>
+      </div>
+    </div>
+
+
+
+          <!-- Another Project -->
+    <div class="group glass rounded-2xl overflow-hidden border dark:border-white/5 border-slate-200 hover:border-cyan-500 transition-all duration-500 shadow-sm hover:shadow-xl bg-white dark:bg-transparent">
+      <div class="aspect-video relative overflow-hidden">
+        <img src="https://media.istockphoto.com/id/978238454/photo/business-team-meeting-photo-professional-investor-working-new-start-up-project-finance-task.jpg?s=2048x2048&w=is&k=20&c=oU3f1pXpMrwZaAAMhsO1xvCqyNuv6rhlIwapv1dqxaU=" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          <a href="#" class="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-500 transition-colors">🔗</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">Node.js</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded dark:bg-slate-800 bg-slate-100 dark:text-slate-400 text-slate-600 border dark:border-transparent border-slate-200">API</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 dark:text-white text-slate-900 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Project Two</h3>
+        <p class="dark:text-slate-400 text-slate-600 text-sm line-clamp-2">Backend service providing secure APIs with authentication and real-time data handling.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="relative max-w-7xl mx-auto px-6 py-14">
+  <!-- Section Title -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Get In Touch</h2>
+    <p class="text-lg text-slate-600 dark:text-slate-400">Interested in collaborating? Drop me a line.</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-16">
+    <!-- Left Side -->
+    <div>
+      <h3 class="text-3xl font-bold mb-6 dark:text-white text-slate-900">
+        Let's build something <span class="text-cyan-600 dark:text-cyan-400 italic font-display">extraordinary</span> together.
+      </h3>
+      <p class="dark:text-slate-400 text-slate-600 mb-10 text-lg leading-relaxed">
+        Whether you have a specific project in mind or just want to chat about tech, my inbox is always open.
+      </p>
+
+      <div class="space-y-6">
+        <!-- Email -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full dark:bg-slate-900 bg-slate-100 flex items-center justify-center text-cyan-600 dark:text-cyan-400 border dark:border-slate-800 border-slate-200">
+            📧
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 uppercase tracking-widest">Email Me</div>
+            <div class="text-lg font-bold dark:text-white text-slate-900">siddhant14k@gmail.com</div>
+          </div>
+        </div>
+x
+        <!-- Socials -->
+        <div class="flex gap-4 mt-8">
+          <a href="#" class="w-12 h-12 glass rounded-full flex items-center justify-center dark:text-slate-400 text-slate-600 dark:hover:text-cyan-400 hover:text-cyan-600 hover:scale-110 transition-all border dark:border-white/5 border-slate-200">🐙</a>
+          <a href="#" class="w-12 h-12 glass rounded-full flex items-center justify-center dark:text-slate-400 text-slate-600 dark:hover:text-cyan-400 hover:text-cyan-600 hover:scale-110 transition-all border dark:border-white/5 border-slate-200">💼</a>
+          <a href="#" class="w-12 h-12 glass rounded-full flex items-center justify-center dark:text-slate-400 text-slate-600 dark:hover:text-cyan-400 hover:text-cyan-600 hover:scale-110 transition-all border dark:border-white/5 border-slate-200">🐦</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="glass p-8 rounded-2xl border dark:border-white/5 border-slate-200 shadow-2xl bg-white dark:bg-transparent">
+      <form class="space-y-6">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium dark:text-slate-400 text-slate-600 mb-2">Name</label>
+            <input type="text" class="w-full dark:bg-slate-900/50 bg-slate-50 border dark:border-slate-800 border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-900 dark:text-white" placeholder="John Doe">
+          </div>
+          <div>
+            <label class="block text-sm font-medium dark:text-slate-400 text-slate-600 mb-2">Email</label>
+            <input type="email" class="w-full dark:bg-slate-900/50 bg-slate-50 border dark:border-slate-800 border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-900 dark:text-white" placeholder="john@example.com">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium dark:text-slate-400 text-slate-600 mb-2">Subject</label>
+          <input type="text" class="w-full dark:bg-slate-900/50 bg-slate-50 border dark:border-slate-800 border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-900 dark:text-white" placeholder="Project Inquiry">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium dark:text-slate-400 text-slate-600 mb-2">Message</label>
+          <textarea rows="4" class="w-full dark:bg-slate-900/50 bg-slate-50 border dark:border-slate-800 border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-900 dark:text-white" placeholder="Tell me about your project..."></textarea>
+        </div>
+
+        <button class="w-full py-4 bg-cyan-500 text-slate-950 font-bold rounded-lg hover:bg-cyan-600 transition-all active:scale-95 shadow-lg shadow-cyan-500/20">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <!-- Brand Section -->
+      <div class="space-y-6">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">D</span>
+          </div>
+          <span class="text-white font-bold text-2xl tracking-tight">DevFlow</span>
+        </div>
+        <p class="text-slate-400 leading-relaxed max-w-xs">
+          Crafting premium digital experiences through thoughtful design and robust engineering. Available for worldwide collaborations.
+        </p>
+        <div class="flex space-x-4">
+          <!-- Example social links -->
+          <a href="#" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-600 transition-all group" aria-label="Twitter">
+            <svg class="w-5 h-5 fill-slate-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.26 4.26 0 001.88-2.36c-.82.49-1.72.85-2.68 1.04a4.23 4.23 0 00-7.2 3.86 12 12 0 01-8.72-4.42 4.23 4.23 0 001.31 5.65 4.2 4.2 0 01-1.92-.53v.05a4.24 4.24 0 003.39 4.15 4.27 4.27 0 01-1.91.07 4.24 4.24 0 003.96 2.94A8.49 8.49 0 012 19.54a12 12 0 006.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.36 8.36 0 0022.46 6z" />
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-600 transition-all group" aria-label="Facebook">
+            <svg class="w-5 h-5 fill-slate-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.7c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.89h-2.3v6.99C18.34 21.13 22 16.99 22 12z"/>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank"
+   class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-600 transition-all group"
+   aria-label="LinkedIn">
+
+  <svg class="w-5 h-5 fill-slate-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24">
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+  </svg>
+</a>
+
+
+<a href="https://www.instagram.com/YOUR_USERNAME" target="_blank"
+   class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-600 transition-all group"
+   aria-label="Instagram">
+
+  <svg class="w-5 h-5 fill-slate-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24">
+    <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.9a1.1 1.1 0 100 2.2 1.1 1.1 0 000-2.2z"/>
+  </svg>
+</a>
+
+          <!-- Add more social links as needed -->
+        </div>
+      </div>
+
+      <!-- Navigation Section -->
+      <div>
+        <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Quick Links</h3>
+        <ul class="space-y-4">
+          <li><a href="#home" class="hover:text-indigo-400 transition-colors inline-block">Home</a></li>
+          <li><a href="#about" class="hover:text-indigo-400 transition-colors inline-block">About</a></li>
+          <li><a href="#skills" class="hover:text-indigo-400 transition-colors inline-block">Skills</a></li>
+          <li><a href="#projects" class="hover:text-indigo-400 transition-colors inline-block">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-indigo-400 transition-colors inline-block">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Section -->
+      <div>
+        <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Services</h3>
+        <ul class="space-y-4">
+          <li><a href="#" class="hover:text-indigo-400 transition-colors inline-block">Web Development</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors inline-block">UI/UX Design</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors inline-block">Mobile Apps</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors inline-block">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div>
+        <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Join the Circle</h3>
+        <p class="text-slate-400 mb-6 leading-relaxed">
+          Get the latest design insights and tech updates delivered to your inbox.
+        </p>
+        <form class="space-y-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+          <div class="relative group">
+            <input
+              type="email"
+              required
+              placeholder="name@email.com"
+              class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all placeholder:text-slate-500"
+            />
+          </div>
+          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg transition-colors shadow-lg">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-slate-800 pt-8 mt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <p class="text-sm text-slate-500">
+          © 2026 DevFlow. All rights reserved.
+        </p>
+        <div class="flex space-x-6 text-sm text-slate-500">
+          <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-slate-300 transition-colors">Cookies</a>
+        </div>
+        <p class="text-sm text-slate-500 flex items-center">
+          Built with <span class="text-red-500 mx-1">❤</span> by <a href="#" class="ml-1 text-indigo-400 hover:underline">DevFlow</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Dark Mode Toggle
+  const darkModeBtn = document.getElementById('darkModeBtn');
+  const darkModeBtnMobile = document.getElementById('darkModeBtnMobile');
+
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+  };
+
+  darkModeBtn.addEventListener('click', toggleDarkMode);
+  darkModeBtnMobile.addEventListener('click', toggleDarkMode);
+</script>
+
+
+<script src="./theme.js"></script>
+</body>
+</html>
